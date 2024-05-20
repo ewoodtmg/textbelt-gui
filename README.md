@@ -1,7 +1,7 @@
 # textbelt-gui
 A simple web interface for textbelt.
 
-ChatGPT and I made the wrapper in order for me to learn how to code more. The project is intended to run with docker, though I you can manually install it if you want to.
+ChatGPT and I made the wrapper in order for me to learn how to code more. The project is intended to run with docker, though you can manually install it if you want to.
 I don't suggest setting this publically as I don't trust the security really. You should probably change the jwt in server.js
 
 To start, download and run the following:
