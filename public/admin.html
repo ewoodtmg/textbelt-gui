@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <div id="auth-container">
+            <h1>Admin Dashboard</h1>
+            <h2>Admin Login</h2>
+            <form id="admin-login-form" autocomplete="off">
+                <input type="text" id="admin-username-or-email" placeholder="Username or Email" required>
+                <input type="password" id="admin-password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div id="logged-in-container" style="display:none;">
+            <div id="header">
+                <h1>Admin Dashboard</h1>
+                <button id="logout-button" class="logout-button">Logout</button>
+            </div>
+            <h2>Users</h2>
+            <div id="search-container">
+                <input type="text" id="search-input" placeholder="Search by username or email">
+                <button id="search-button">Search</button>
+            </div>
+            <div id="users-container">
+                <table id="users-table">
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="users-tbody">
+                        <!-- Users will be dynamically inserted here -->
+                    </tbody>
+                </table>
+            </div>
+            <div id="pagination-controls">
+                <button id="prev-page">Previous</button>
+                <span id="current-page">1</span> / <span id="total-pages">1</span>
+                <button id="next-page">Next</button>
+            </div>
+            <div id="edit-user-container" style="display:none;">
+                <h2>Edit User</h2>
+                <form id="edit-user-form" autocomplete="off">
+                    <input type="hidden" id="edit-user-id">
+                    <label for="edit-username">Username</label>
+                    <input type="text" id="edit-username" placeholder="Username" required>
+                    <label for="edit-email">Email</label>
+                    <input type="email" id="edit-email" placeholder="Email" required>
+                    <label for="edit-api-key">API Key</label>
+                    <input type="text" id="edit-api-key" placeholder="API Key">
+                    <label for="edit-password">Password</label>
+                    <input type="password" id="edit-password" placeholder="Password (leave blank if not changing)">
+                    <label for="edit-role">Role</label>
+                    <select id="edit-role">
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                    <button type="submit">Update User</button>
+                    <button type="button" id="cancel-edit-button">Cancel</button>
+                </form>
+            </div>
+        </div>
+        <div id="error-message" style="display:none;">
+            <p id="error-text"></p>
+        </div>
+    </div>
+    <script src="admin-scripts.js"></script>
+</body>
+</html>
