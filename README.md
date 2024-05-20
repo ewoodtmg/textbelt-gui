@@ -32,4 +32,5 @@ The default admin credentials are admin:admin
 You'll get to the admin page by going to $your_ip:3000/admin
 Log in and from there you should be able to manage user permissions and even delete users.
 
-![image](https://github.com/ewoodtmg/textbelt-gui/assets/30943390/c8429f11-7a2b-4057-b871-7faa5c8056c2)
+![image](https://github.com/ewoodtmg/textbelt-gui/assets/30943390/d7c58551-f01b-40aa-a509-94f268edc6b5)
+
